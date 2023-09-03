@@ -46,34 +46,28 @@ new Chart(analyticsChart,{
 
 
 
-const DATA_COUNT = 12;
+const DATA_COUNT = 6;
 const labels = [];
 for (let i = 0; i < DATA_COUNT; ++i) {
   labels.push(i.toString());
 }
-const datapoints = [0, 20, 20, 60, 60, 120, NaN, 180, 120, 125, 105, 110, 170];
+const datapoints = [0, 20, 20, 60, 50, 30];
 const data2 = {
-  labels: labels,
+  labels: ['January', 'February', 'March', 'April', 'May', 'June'],
   datasets: [
     {
       label: 'Cubic interpolation (monotone)',
       data: datapoints,
-      borderColor: 'rgb(255, 99, 132)',
+      borderColor: '#2563EB',
       fill: false,
       cubicInterpolationMode: 'monotone',
-      tension: 0.4
-    }, {
-      label: 'Cubic interpolation',
-      data: datapoints,
-      borderColor: 'rgb(255, 99, 132)',
-      fill: false,
-      tension: 0.4
-    }, {
-      label: 'Linear interpolation (default)',
-      data: datapoints,
-      borderColor: 'rgb(255, 99, 132)',
-      fill: false
-    }
+      tension: 0.4,
+      // pointRadius: 0,
+      pointHoverRadius: 4,
+      pointHoverBackgroundColor: "red",
+      pointHoverBorderColor: 'yellow',
+      pointHoverBorderWidth: 2
+    }, 
   ]
 };
 
@@ -85,30 +79,31 @@ new Chart(dashboardChart, {
   data: data2,
   options: {
     responsive: true,
-    plugins: {
-      title: {
-        display: true,
-        text: 'Chart.js Line Chart - Cubic interpolation mode'
-      },
-    },
-    interaction: {
-      intersect: false,
-    },
+    scaleLineColor: "rgba(0,0,0,0)",
     scales: {
       x: {
+        type: 'category',
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'], 
         display: true,
         title: {
           display: true
+        },
+        grid:{
+          display: false
         }
+        
       },
       y: {
+        // beginAtZero: false,
         display: true,
-        title: {
-          display: true,
-          text: 'Value'
-        },
-        suggestedMin: -10,
-        suggestedMax: 200
+        suggestedMin: '-10k',
+        suggestedMax: '200k',
+        
+      },
+    },
+    plugins: {
+      legend:{
+        display: false
       }
     }
   },
