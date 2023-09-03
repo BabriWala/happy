@@ -392,7 +392,16 @@
     padding-bottom: 16px;
 }
 
-
+.active{
+    color: #007AFF;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 21px */
+    border-bottom: 2px solid #007AFF;
+    padding-bottom: 7px;
+}
 
 
 

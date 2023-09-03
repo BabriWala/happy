@@ -1,4 +1,6 @@
+$(document).ready(function(){
 // Show the first tab and hide the rest
+console.log($('#tabs-nav li:first-child').addClass('active'))
 $('#tabs-nav li:first-child').addClass('active');
 $('.tab-content').hide();
 $('.tab-content:first').show();
@@ -8,13 +10,14 @@ $('#tabs-nav li').click(function(){
   $('#tabs-nav li').removeClass('active');
   $(this).addClass('active');
   $('.tab-content').hide();
-  
+  console.log(this)
   var activeTab = $(this).find('a').attr('href');
+  // console.log(activeTab)
   $(activeTab).fadeIn();
   return false;
 });
 
-$(document).ready(function(){
+
   const analyticsChart = document.getElementById('analyticsChart')
 // console.log(analyticsChart)
 const data = {
@@ -39,7 +42,7 @@ new Chart(analyticsChart,{
     cutoutPercentage: 40,
   }
 })
-});
+
 
 
 
@@ -49,7 +52,7 @@ for (let i = 0; i < DATA_COUNT; ++i) {
   labels.push(i.toString());
 }
 const datapoints = [0, 20, 20, 60, 60, 120, NaN, 180, 120, 125, 105, 110, 170];
-const data = {
+const data2 = {
   labels: labels,
   datasets: [
     {
@@ -79,7 +82,7 @@ const dashboardChart = document.getElementById('dashboard-chart')
 
 new Chart(dashboardChart, {
   type: 'line',
-  data: data,
+  data: data2,
   options: {
     responsive: true,
     plugins: {
@@ -110,3 +113,5 @@ new Chart(dashboardChart, {
     }
   },
 }) 
+
+});
