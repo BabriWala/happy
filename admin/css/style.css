@@ -195,6 +195,60 @@
 
 /* dashboard Analytics */
 
+.dashboard__analytics{
+    background: #FFF;
+    padding: 50px;
+}
+.dashboard__analytics-title{
+    color: #030229;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 80px;
+    text-align: center;
+}
+#analyticsChart{
+    margin-bottom: 50px;
+}
+.dashboard__analytics-report{
+    display: flex;
+    justify-content: space-between;
+}
+.dashboard__analytics-report h6{
+    color: #030229;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+}
+.dashboard__analytics-report h6 span{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #007AFF;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
