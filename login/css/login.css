@@ -3,7 +3,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-
 .login{
     height: 100vh;
     display: flex;
@@ -137,7 +136,6 @@
 
 }
 .login__btn:hover{
-    
     background-color: transparent;
     border-color: #007AFF;
     color: #007AFF;
