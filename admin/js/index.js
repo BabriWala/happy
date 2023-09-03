@@ -62,17 +62,63 @@ const data2 = {
       fill: false,
       cubicInterpolationMode: 'monotone',
       tension: 0.4,
-      // pointRadius: 0,
-      pointHoverRadius: 4,
-      pointHoverBackgroundColor: "red",
-      pointHoverBorderColor: 'yellow',
-      pointHoverBorderWidth: 2
+      pointRadius: 4,
+      pointHoverRadius: 10,
+      pointHoverBackgroundColor: "#007AFF",
+      pointHoverBorderColor: 'white',
+      pointHoverBorderWidth: 4
     }, 
   ]
 };
 
+
+
 const dashboardChart = document.getElementById('dashboard-chart')
 
+const tooltipLine = {
+  id: 'tooltipLine',
+  beforeDraw: chart =>{
+    
+    if(chart.tooltip._active && chart.tooltip._active.length){
+      // console.log(chart)
+      const ctx = chart.ctx;
+      // // ctx.save(); 
+      const activePoint = chart.tooltip._active[0];
+      // // console.log(activePoint)
+      ctx.beginPath();
+      // ctx.setLineDash([5,7]);
+      ctx.moveTo(activePoint.element.x, activePoint.element.y);
+      ctx.lineTo(activePoint.element.x, chart.chartArea.bottom);
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = '#CBD5E1';
+      ctx.stroke();
+      ctx.restore();
+
+    }
+  }
+}
+
+class Custom extends Chart.LineController{
+  draw(){
+    super.draw(arguments)
+    const ctx = this.chart.ctx;
+    let _stroke = ctx.stroke;
+    ctx.stroke = function(){
+      ctx.save();
+      ctx.shadowColor = 'black';
+      ctx.shadowBlur = 10;
+      ctx.shadowOffsetX = 20;
+      ctx.shadowOffsetY = 20;
+      _stroke.apply(this, arguments);
+      ctx.restore()
+    }
+  }
+}
+
+Custom.id = 'shadowLine';
+Custom.defaults = Chart.LineController.defaults;
+
+Chart.register(Custom)
 
 new Chart(dashboardChart, {
   type: 'line',
@@ -102,11 +148,13 @@ new Chart(dashboardChart, {
       },
     },
     plugins: {
-      legend:{
-        display: false
-      }
+      legend: {
+        display: false //This will do the task
+     }
     }
+    
   },
+  plugins: [tooltipLine]
 }) 
 
 });
