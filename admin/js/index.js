@@ -35,7 +35,7 @@ new Chart(analyticsChart,{
   type: 'doughnut',
   data: data,
   options: {
-    cutout: 110,
+    cutout: 80,
     cutoutPercentage: 40,
   }
 })
