@@ -1,4 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+.admin__panel-container{
+    display: flex;
+}
+.admin__panel{
+    width: 30vh;
+}
+.admin__panel-admin{
+    padding: 26px 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #F1F5F9;
+    border-right: 1px solid #F1F5F9;
+}
+.admin__panel-image{
+    width: 40px;
+    height: 40px;
+    background-color: #FFADA0;
+    filter: drop-shadow(3.3207547664642334px 3.3207547664642334px 10.79245376586914px rgba(0, 0, 0, 0.05));
+    border-radius: 50%;
+    padding: 7px;
+    margin-right: 8px;
+}
+.admin__panel-title{
+    color: #222950;
+    font-family: Plus Jakarta Sans;
+    font-size: 18.264px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 27.396px */
+}
+.admin__property-container{
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.admin__items-container{
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    border-radius: 9px;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 4px;
+}
+.admin__items-container:hover .admin__item-icon g #Vector,
+.admin__items-container:hover .admin__item-icon g #Vector_2,
+.admin__items-container:hover .admin__item-icon path{
+    stroke: #007AFF;
+}
+.admin__items-container:hover{
+    background: #F8FAFF;
+    cursor: pointer;
+}
+.admin__items-container:hover h3{
+    color: #11173F;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 21px */ 
+}
+.admin-item-title{
+    color: #4F6479;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 21px */ 
+    margin-left: 15px;
+}
+.admin__panel-logOut{
+    padding: 12px 20px;
+    border-radius: 12px;
+    background: #F9F9FC;
+    color: #222950;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 21px */
+    display: flex;
+    align-items: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+}
+
+.admin__logout-icon{
+    margin-right: 20px;
+
+}
 
 
 
@@ -42,13 +140,3 @@
     background-color: #FFF;
   }
   
-  /* Just for CodePen styling - don't include if you copy paste */
-  html {
-    margin: 0;
-    padding: 0;
-  }
-  body { 
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-    font-weight: 300;
-    margin: 2em;
-  }
