@@ -203,8 +203,257 @@
     font-weight: 600;
     line-height: 150%; /* 30px */
 }
+.dashboard__main-so-container{
+    border-radius: 12px;
+    background: #FFF;
 
+    /* shadow-sm */
+    box-shadow: 0px 10px 20px 0px rgba(5, 46, 128, 0.03);
+    /* padding: 35px; */
+}
+.dashboard__so{
+    padding: 18px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 122, 255, 0.12);
+    background: #FFF;
 
+}
+.dashboard__so-title{
+    color: #222950;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 24px */
+}
+.dashboard__so-btn-container{
+    display: flex;
+}
+.dashboard__so-btn-group{
+    border-radius: 7px;
+    background: #F8FAFF;
+    padding: 10px 16px;
+    margin-right: 11px;
+}
+.dashboard__so-btn-group button{
+    background-color: transparent;
+    border: none;
+}
+.dashboard__so-btn-group button:first-child{
+    margin-right: 24px;
+}
+.dashboard__so-btn-final{
+    padding: 12px;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid #E0EFFF;
+    background:  #FFF;
+}
+.dashboard__so-container{
+    padding: 31px 35px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+}
+.dashboard__so-item{
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #F8FAFF;
+    padding: 44px 58px;
+    text-align: center;
+    position: relative;
+}
+.dashboard__so-item-img{
+    margin-bottom: 23px;
+    width: 83px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    border: 2px solid #FFF;
+    cursor: pointer;
+}
+.dashboard__so-item-title{
+    color: #222950;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "Baloo Da 2";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px; /* 122.222% */
+}
+.dashboard__so-item-description{
+    color: #8A94A6;
+    text-align: center;
+    font-family: "Baloo Da 2";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    padding-bottom: 21px;
+}
+.dashboard__view-profile-btn{
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 10px 0;
+    color: #007AFF;
+    text-align: center;
+    font-family: "Baloo Da 2";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 0px 0px 12px 12px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
 
+.dashboard__so-item:hover .dashboard__view-profile-btn{
+    opacity: 1;
+}
 
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+  }
 
+.dashboard__sr-modal{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 20px auto;
+    width: 669px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #FFF;
+    padding: 33px;
+    /* shadow-sm */
+    box-shadow: 0px 10px 20px 0px rgba(5, 46, 128, 0.03);
+    z-index: 2222;
+    position: fixed;
+    display: none;
+}
+
+.dashboard__sr-modal-row{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.dashboard__sr-modal-row div input,
+.dashboard__sr-modal-row div select{
+    width: 100%;
+    padding: 8px 8px;
+    color: #8A94A6;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 22.4px */
+    border-radius: 8px;
+    border: 1px solid #C6D7EF;
+    margin-top: 10px;
+    background-color: #FFF;
+}
+.dashboard__sr-modal-row div{
+    margin-bottom: 10px;
+}
+.dashboard__sr-modal-row div label{
+    color: #595F84;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px; /* 200% */
+}
+.red-mark{
+    color: #FF565E;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px; 
+}
+.group-input-file{
+    border-radius: 8px;
+    border: 1px solid #C6D7EF;
+    display: flex;
+    justify-content: space-between;
+}
+
+.group-input-file label{
+    width: 50%;
+    padding: 8px 8px;
+    cursor: pointer;
+}
+
+.group-input-file label:last-child{
+    border-radius: 0px 8px 8px 0px;
+    border: 1px solid #C6D7EF;
+    background: #F2F8FF; 
+}
+
+#fileUpload{
+    display: none;
+}
+
+.close-btn{
+    text-align: right;
+    cursor: pointer;
+}
+
+.dashboard__sr-modal-save{
+    margin-top: 50px;
+    /* padding: 17px; */
+    display: flex;
+    justify-content: end;
+    border-radius: 0px 0px 12px 12px;
+    background: #F8FAFF;
+    align-items: center;
+}
+
+.dashboard__sr-modal-save button:first-child{
+    border-radius: 7px;
+    border: 1px solid rgba(255, 12, 56, 0.22);
+    background: #FFF;
+    padding: 10px 15px;
+        color: #FF565E;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 16.8px */
+    letter-spacing: 0.2px;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+.dashboard__sr-modal-save button:last-child{
+    border-radius: 7px;
+    background: var(--blue, #007AFF);
+    padding: 10px 15px; 
+    color: #FFF;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 16.8px */
+    letter-spacing: 0.2px;
+    border: none;
+    cursor: pointer;
+}
