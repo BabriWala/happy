@@ -1,7 +1,6 @@
 $('.js-btn-modal').on('click', function(){
     $('#overlay').fadeIn();
-    var id = $(this).data('id');
-    $('.js-modal[data-id="modal' + id + '"]').fadeIn();
+    $('.js-modal').fadeIn();
   });
   
   $('.js-close-btn').on('click', function(){

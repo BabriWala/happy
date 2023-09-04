@@ -180,6 +180,7 @@
     outline: none;
     border: none;
     padding: 8px 20px; 
+    cursor: pointer;
 
 
 }
@@ -250,6 +251,7 @@
     border-radius: 10px;
     border: 1px solid #E0EFFF;
     background:  #FFF;
+    
 }
 .dashboard__so-container{
     padding: 31px 35px;
@@ -358,7 +360,7 @@
 .dashboard__sr-modal-row div input,
 .dashboard__sr-modal-row div select{
     width: 100%;
-    padding: 8px 8px;
+    padding: 12px 12px;
     color: #8A94A6;
     font-family: Inter;
     font-size: 14px;
@@ -398,7 +400,7 @@
 
 .group-input-file label{
     width: 50%;
-    padding: 8px 8px;
+    padding: 12px 12px;
     cursor: pointer;
 }
 
@@ -425,6 +427,7 @@
     border-radius: 0px 0px 12px 12px;
     background: #F8FAFF;
     align-items: center;
+    height: 71px;
 }
 
 .dashboard__sr-modal-save button:first-child{
