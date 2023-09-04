@@ -460,3 +460,132 @@
     border: none;
     cursor: pointer;
 }
+
+
+
+.sr__profile{
+    border-radius: 12px;
+    background: #FFF;
+
+    /* shadow-sm */
+    box-shadow: 0px 10px 20px 0px rgba(5, 46, 128, 0.03);
+    width: 669px;
+    height: 470px; 
+    flex-shrink: 0;
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 55555;
+    border-radius: 12px; 
+    display: none;
+    position: fixed;
+}
+.sr__profile-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 31px;
+    background: #F8FAFF; 
+    margin-bottom: 26px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    /* border-radius-top: 12px; */
+}
+.sr__profile-img-container{
+    display: flex;
+    align-items: center;
+}
+.sr__img{
+    width: 56px;
+    height: 58px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    margin-right: 32px;
+}
+.sr__name{
+    color: #222950;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%; /* 25.6px */
+}
+.sr__table-container{
+    padding: 0 31px 50px 31px;
+}
+.sr__table{
+    
+    width: 100%;
+}
+.sr__table, tr, td{
+    border: 1px solid #D4DDF2;
+    border-collapse: collapse;
+
+}
+.sr__table tr td:first-child{
+    color:  #595F84;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px; /* 200% */
+    padding: 7px 16px;
+    width: 25%;
+}
+.sr__table tr td:last-child{
+    color: #8A94A6;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px; /* 200% */
+    padding: 7px 16px;
+    width: 75%;
+    
+
+}
+.sr__edit{
+
+    border-radius: 0px 0px 12px 12px;
+    background: #F8FAFF;
+    padding: 17px 31px;
+    display: flex;
+    justify-content: end;
+
+}
+
+.sr__edit button:first-child{
+    border-radius: 7px;
+border: 1px solid rgba(255, 12, 56, 0.22);
+background: #FFF;
+color: #FF565E;
+font-family: Inter;
+font-size: 12px;
+font-style: normal;
+font-weight: 600;
+line-height: 140%; /* 16.8px */
+letter-spacing: 0.2px;
+margin-right: 16px;
+padding: 10px 15px; 
+border: none;
+outline: none;
+cursor: pointer;
+}
+
+.sr__edit button:last-child{
+    border-radius: 7px;
+background: #007AFF;
+color: #FFF;
+font-family: Inter;
+font-size: 12px;
+font-style: normal;
+font-weight: 600;
+line-height: 140%; /* 16.8px */
+letter-spacing: 0.2px;
+padding: 10px 15px; 
+border: none;
+outline: none;
+cursor: pointer;
+}
