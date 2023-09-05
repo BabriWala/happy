@@ -34,10 +34,10 @@ $(document).ready(function () {
       ],
     };
 
-    const doughnutLabel = {
-      id: 'doughnutLabel',
-      
-    }
+    // const doughnutLabel = {
+    //   id: 'doughnutLabel',
+
+    // }
   
     new Chart(analyticsChart, {
       type: "doughnut",
@@ -50,8 +50,8 @@ $(document).ready(function () {
         // categoryPercentage: 10
         spacing: -8,
         borderWidth: 0,
-      },
-      plugins:[doughnutLabel]
+      }
+      // plugins:[doughnutLabel]
     });
   
     const DATA_COUNT = 6;
