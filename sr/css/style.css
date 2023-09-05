@@ -144,7 +144,8 @@
 
 .dashboard__container{
     padding: 33px 40px 80px 24px;
-    background: #F8FAFF;;
+    background: #F8FAFF;
+    width: 100%;
 }
 
 .dashboard__card-container{
@@ -186,6 +187,8 @@
 
 .dashboard__main-container{
     display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .dashboard__main-container main{
@@ -193,7 +196,13 @@
     margin-right: 23px;
 }
 
+.dashboard__right-side{
+    width: 28%;
+    text-align: right;
+}
+
 /* dashboard Analytics */
+
 
 .dashboard__analytics{
     background: #FFF;
@@ -406,19 +415,188 @@
 
 
 /* SR Profile Start */
-.sr__profile{}
-.sr__details-container{}
-.sr__name-details{}
-.sr__image{}
-.sr__name-container{}
-.sr__name{}
-.sr__mobile{}
-.sr__compnay-details{}
-.sr__company-image{}
-.sr__company-name{}
-.sr__joining{}
-.sr__joining-icon{}
-.sr__joining-container{}
-.sr__joining-title{}
-.sr__joining-date{}
+.sr__profile{
+    border-radius: 12px;
+    border: 1px solid rgba(0, 122, 255, 0.19);
+    background: #FFF;
+
+    /* shadow-sm */
+    box-shadow: 0px 10px 20px 0px rgba(5, 46, 128, 0.03);
+    position: relative;
+}
+.sr__details-container{
+    padding: 45px 0px 45px 40px;
+    display: flex;
+}
+.sr__name-details{
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+    
+}
+.sr__image{
+    width: 80px;
+    height: 82px;
+    border-radius: 50px;
+    margin-right: 33px;
+}
+.sr__name{
+    color:  #222950;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%; /* 32px */
+}
+.sr__mobile{
+    color: #8A94A6;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 22.4px */
+}
+.sr__company-details{
+    display: flex;
+    align-items: center;
+    margin-right: 80px;
+}
+.sr__company-image{
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #EC1C24;
+    margin-right: 20px;
+}
+.sr__company-name{
+    color: #222950;
+    font-family: "Baloo Da 2";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 24px */
+    letter-spacing: 0.2px;
+}
+.sr__joining{
+    display: flex;
+    align-items: center;
+}
+.sr__joining-icon{
+    width: 56px;
+    height: 56px;
+    margin-right: 18px;
+
+}
+.sr__joining-title{
+    color: #222950;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 24px */
+}
+.sr__joining-date{
+    color: #8A94A6;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 22.4px */
+}
+.sr__activity{
+    border-top: 1px solid #C9E2FF;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    
+}
+.sr__activity-item{
+    border-right: 1px solid #C9E2FF;
+    padding: 50px 64px;
+}
+.sr__activity-item:last-child{
+    border-right: none;
+}
+.sr__activity-total{
+    color: #595F84;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 18px */
+    text-transform: uppercase;
+}
+.sr__activity-number{
+    color: #222950;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 24px */
+}
+.sr__activity-item:last-of-type .sr__activity-number{
+    color: #FF8F6B;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 24px */
+}
+.sr_edit-icon{
+    position: absolute;
+    top: 21px;
+    right: 25px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+}
+.sr__edit-container{
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 10px 20px 0px rgba(5, 46, 128, 0.07);
+    width: 110px;
+    height: 68px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    position: absolute;
+    top: 44px;
+    right: 35px;
+}
+.sr__edit-btn{
+    color: #595F84;
+    font-family: Inter;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 17.6px */
+    margin-bottom: 12px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-align: left;
+
+}
+.sr__delete-btn{
+    color: #FF565E;
+    font-family: Inter;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 17.6px */
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-align: left;
+}
+.sr__edit-btn svg,
+.sr__delete-btn svg{
+    margin-right: 10px;
+}
 /* SR Profile End */
