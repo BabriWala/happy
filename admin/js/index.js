@@ -39,7 +39,12 @@ new Chart(analyticsChart,{
   data: data,
   options: {
     cutout: 80,
-    cutoutPercentage: 40,
+    // cutoutPercentage: 40,
+    borderRadius: 30,
+    // barPercentage: 10,
+    // categoryPercentage: 10
+    spacing: -8,
+    borderWidth:0, 
   }
 })
 
