@@ -33,12 +33,17 @@ $(document).ready(function () {
         },
       ],
     };
+
+    const doughnutLabel = {
+      id: 'doughnutLabel',
+      
+    }
   
     new Chart(analyticsChart, {
       type: "doughnut",
       data: data,
       options: {
-        cutout: 80,
+        cutout: 120,
         // cutoutPercentage: 40,
         borderRadius: 30,
         // barPercentage: 10,
@@ -46,6 +51,7 @@ $(document).ready(function () {
         spacing: -8,
         borderWidth: 0,
       },
+      plugins:[doughnutLabel]
     });
   
     const DATA_COUNT = 6;
@@ -155,36 +161,27 @@ $(document).ready(function () {
 
   
 // Bar Chart
+const topSellChart = document.getElementById("top-sell-chart");
+const topSellChartContext = topSellChart.getContext('2d');
+const gradientBg = topSellChartContext.createLinearGradient(0,0,0,350)
 
+gradientBg.addColorStop(0, '#BAD8FF');
+gradientBg.addColorStop(1, 'rgba(219, 234, 254, 0.46)');
 // const barLabels = Utils.months({count: 7});
 const barData = {
   labels: ["S", "M", "T", "W", "T", "F"],
   datasets: [{
     label: 'My First Dataset',
     data: [65, 59, 80, 81, 56, 55, 40],
-    backgroundColor: [
-      'rgba(255, 99, 132, 0.2)',
-      'rgba(255, 159, 64, 0.2)',
-      'rgba(255, 205, 86, 0.2)',
-      'rgba(75, 192, 192, 0.2)',
-      'rgba(54, 162, 235, 0.2)',
-      'rgba(153, 102, 255, 0.2)',
-      'rgba(201, 203, 207, 0.2)'
-    ],
-    borderColor: [
-      'rgb(255, 99, 132)',
-      'rgb(255, 159, 64)',
-      'rgb(255, 205, 86)',
-      'rgb(75, 192, 192)',
-      'rgb(54, 162, 235)',
-      'rgb(153, 102, 255)',
-      'rgb(201, 203, 207)'
-    ],
-    borderWidth: 1
+    backgroundColor: gradientBg,
+
+    borderRadius: 8,
+    hoverBackgroundColor: '#007AFF'
   }]
 };
 
-const topSellChart = document.getElementById("top-sell-chart");
+
+
 
 new Chart(topSellChart,{
     type: 'bar',
@@ -192,7 +189,18 @@ new Chart(topSellChart,{
     options: {
       scales: {
         y: {
-          beginAtZero: true
+          beginAtZero: true,
+          
+        },
+        x: {
+          grid: {
+            display: false
+          }
+        }
+      },
+      plugins: {
+        legend:{
+          display: false
         }
       }
     },

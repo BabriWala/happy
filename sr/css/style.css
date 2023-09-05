@@ -207,7 +207,6 @@
 .dashboard__analytics{
     background: #FFF;
     padding: 50px;
-    height: 487px;
 }
 .dashboard__analytics-title{
     color: #030229;
@@ -466,7 +465,6 @@
     height: 56px;
     flex-shrink: 0;
     border-radius: 8px;
-    background: #EC1C24;
     margin-right: 20px;
 }
 .sr__company-name{
